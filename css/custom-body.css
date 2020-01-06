@@ -165,8 +165,8 @@
     }
     /* EXPERIENCE */
     div.container-experience{
-      padding-right: 0px;
-      padding-left: 0px;
+      /* padding-right: 0px; */
+      /* padding-left: 0px; */
     }
     div.container-experience div.exp-text-column{
       /* padding-top: 10px; */
