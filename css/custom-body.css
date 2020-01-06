@@ -168,11 +168,11 @@
       padding-right: 0px;
       padding-left: 0px;
     } */
-    /* div.container-experience div.exp-text-column{
-      padding-top: 10px;
+    div.container-experience div.exp-text-column{
+      /* padding-top: 10px; */
       padding-left: 0px;
       padding-right: 0px;
-    } */
+    }
     .container-experience .content-under-title{
       font-size: x-large;
       font-weight: bolder;
