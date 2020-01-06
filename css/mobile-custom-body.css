@@ -1,0 +1,94 @@
+/* import fonts */
+@font-face {
+    font-family: orator;
+    src: url("/fonts/OratorStd.otf") format("opentype");
+  }
+  @font-face {
+    font-family: lane;
+    src: url("/fonts/lane-narrow.ttf")format("truetype");
+  }
+/* import fonts end*/
+
+.line-divider {
+width: 10%;
+margin-top: 0rem;
+border-top-width: 2px;
+/* border-top-right-radius: 10px; */
+/* border-bottom-right-radius: 10px; */
+border-color: black;
+}
+
+body{
+  font-family: lane;
+}
+
+#content{  
+  font-family: lane;
+  font-size: xx-large;
+}
+
+#Prenomtitre{
+font-size: 2vh; 
+text-align: center;
+font-family: orator;
+}
+#NomTitre{
+font-size: 2vh;
+text-align: center;
+font-family: orator;
+}
+
+/* Custom Scrollbar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px whitesmoke; 
+    border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white; 
+  }
+/* custom scrollbar end */
+
+/* intro animation */
+  .fadein {
+    opacity: 0;
+    -moz-transition: opacity 1.25s;
+    -webkit-transition: opacity 1.25s;
+    -o-transition: opacity 1.25s;
+    transition: opacity 1.25s;
+  }
+  body.loaded .fadein {
+      opacity: 1;
+  }
+/* intro animation end*/
+
+/* nav menu left */
+  /* nav#menu {
+    direction: rtl;
+    padding-left: 75%;
+    padding-right: 0px;
+  }
+  nav#menu ul{
+    padding-right: 0%;
+  } */
+  nav#menu ul li a {
+    padding: 5px;
+    display: block;
+  }
+  nav#menu ul li a.active{
+    border-radius: 2px;
+    /* box-shadow: 0px 1px 1px gray; */
+    background-color: white;
+    padding-right: 5px;
+  }
+/* nav menu left end*/

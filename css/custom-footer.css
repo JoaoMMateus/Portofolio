@@ -1,0 +1,12 @@
+footer.page-footer div ul li a {
+    font-family: lane;
+    font-size: small;
+    color: #696969;
+}
+footer.page-footer div ul li a i {
+    font-size: medium;
+    color: #696969;
+}
+footer.page-footer {
+    background-color: whitesmoke;
+}

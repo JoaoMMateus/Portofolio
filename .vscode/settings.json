@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1d08a340-0a11-4aea-ab56-4f5702464bbc/resourceGroups/PortofolioRessourceGroup/providers/Microsoft.Web/sites/martinsmateus-joao",
+    "appService.deploySubpath": ""
+}

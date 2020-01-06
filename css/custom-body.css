@@ -1,0 +1,227 @@
+/* import fonts */
+    @font-face {
+      font-family: orator;
+      src: url("/fonts/OratorStd.otf") format("opentype");
+    }
+    @font-face {
+      font-family: lane;
+      src: url("/fonts/lane-narrow.ttf")format("truetype");
+    }
+/* import fonts end*/
+
+#content{
+  font-family: lane;
+  font-size: medium;
+}
+#Prenomtitre{
+  font-size: 5vh; 
+  text-align: right;
+  font-family: orator;
+}
+#NomTitre{
+  font-size: 5vh;
+  text-align: right;
+  font-family: orator;
+}
+
+/* Custom Scrollbar */
+    /* width */
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px whitesmoke; 
+      border-radius: 10px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: black; 
+      border-radius: 10px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: white; 
+    }
+/* custom scrollbar end */
+
+/*intro animation */
+    .fadein {
+      opacity: 0;
+      -moz-transition: opacity 1.25s;
+      -webkit-transition: opacity 1.25s;
+      -o-transition: opacity 1.25s;
+      transition: opacity 1.25s;
+    }
+    body.loaded .fadein {
+        opacity: 1;
+    }
+/* intro animation end*/
+
+/* nav menu left */
+    div.row.Name-Title{
+      margin-left: -9vh;
+    }
+    nav#menu {
+      direction: rtl;
+      padding-left: 75%;
+      padding-right: 0px;
+    }
+    nav#menu ul{
+      padding-right: 0%;
+    }
+    nav#menu ul li a {
+      width: max-content;
+      padding: 5px;
+      display: block;
+      font-family: lane;
+      font-size: medium;
+      color: #696969;
+    }
+    nav#menu ul li a.active{
+      font-size: large;
+      font-weight: 600;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      /* box-shadow: 0px 1px 1px gray; */
+      background-color: white;
+      padding-right: 5px;
+    }
+/* nav menu left end*/
+
+/* content */
+    .under-line {
+      width: 5%;
+      margin-top: 0rem;
+      border-top-width: 2px;
+      border-color: black;
+    }
+    .line-divider{
+      width: 70%;
+      border-top-width: 1.5px;
+      border-color: gray;
+    }
+    div#content div.content-title{
+      font-size: xx-large;
+      font-weight: bolder;
+    }
+    div#content div.content-date{
+      font-size: larger;
+    }
+    div#content div.content-text{
+      font-size: larger;
+    }
+    /* ABOUT ME */
+    #about-me{
+      margin-top: 20vh;
+    }
+    #about-me-text{
+      margin-top: 10vh;
+      margin-bottom: 10vh;
+      text-align: justify;
+    }
+    /* EDUCATION */
+    .content-second-title{
+      font-size: x-large;
+      font-weight: bolder;
+    }
+    .content-date-and-location{
+      font-size: medium;
+      font-weight: lighter;
+      font-style: oblique;
+    }
+    .about-diploma{
+      font-weight: bolder;
+      font-size: x-large;
+      text-align: left;
+    }
+    /* SKILLS */
+    .skill-image{
+      padding-top: 10px;
+      align-content: center;
+    }
+    .img-element:hover{
+      background-color: white;
+      border-radius: 5px;
+    }
+    .skill-description{
+      text-align: center;
+      font-size: medium;
+      font-weight: bolder;
+    }
+    .row-title-skills{
+      font-weight: bold;
+      font-size: x-large;
+    }
+    .second-title-skills{
+      font-weight: bolder;
+    }
+    div.skill-language-name{
+      font-weight: bold;
+    }
+    div.skill-language-level{
+      font-weight: normal;
+      font-size: medium;
+    }
+    /* EXPERIENCE */
+    div.container-experience{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    div.container-experience div.exp-text-column{
+      /* padding-top: 10px; */
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .container-experience .content-under-title{
+      font-size: x-large;
+      font-weight: bolder;
+    }
+    .container-experience .content-date{
+      font-style: oblique;
+      font-size: smaller;
+      font-weight: lighter;
+    }
+    .container-experience .content-job-title{
+      font-size: x-large;
+      font-weight: bolder;
+    }
+    .container-experience .content-text.about-experience{
+      font-size: medium;
+      text-align: left;
+    }
+    /* EXTRACURRICULAR ACTIVITIES */
+    .container-extracurricular-activities .content-under-title{
+      font-size: x-large;
+      font-weight: bolder;
+    }
+    .container-extracurricular-activities .content-date{
+      font-style: oblique;
+      font-size: smaller;
+      font-weight: lighter;
+    }
+    .container-extracurricular-activities .about-extracurricular-activitie{
+      font-size: medium;
+      text-align: left;
+    }
+    /* Projects */
+    div.container-projects{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    div.container-projects div.content-under-title{
+      font-size: x-large;
+      font-weight: bolder;
+    }
+    div.container-projects div.content-date{
+      font-style: oblique;
+      font-size: smaller;
+      font-weight: lighter;
+    }
+    div.container-projects div.about-project{
+      font-size: smaller;
+      font-weight: 500;
+      text-align: justify;
+      /* max-height: 20vh; */
+      /* overflow: scroll; */
+    }

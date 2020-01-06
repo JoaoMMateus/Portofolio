@@ -1,0 +1,14 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app-start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JMMateus",
+  "license": "ISC",
+  "dependencies": {
+    "device-detector-js": "^2.0.5"
+  }
+}
