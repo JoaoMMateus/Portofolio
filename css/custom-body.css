@@ -1,7 +1,8 @@
 /* import fonts */
     @font-face {
       font-family: orator;
-      src: url("/fonts/OratorStd.otf") format("opentype");
+      src: url("/fonts/OratorStd.otf")format("opentype");
+      /* src: url("/fonts/Orator.ttf") format("truetype"); */
     }
     @font-face {
       font-family: lane;
