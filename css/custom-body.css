@@ -1,9 +1,9 @@
 /* import fonts */
-    @font-face {
-      font-family: orator;
-      src: url("/fonts/OratorStd.otf")format("opentype");
+    /* @font-face { */
+      /* font-family: orator; */
+      /* src: url("/fonts/OratorStd.otf")format("opentype"); */
       /* src: url("/fonts/Orator.ttf") format("truetype"); */
-    }
+    /* } */
     @font-face {
       font-family: lane;
       src: url("/fonts/lane-narrow.ttf")format("truetype");
@@ -17,12 +17,12 @@
 #Prenomtitre{
   font-size: 5vh; 
   text-align: right;
-  font-family: orator;
+  /* font-family: orator; */
 }
 #NomTitre{
   font-size: 5vh;
   text-align: right;
-  font-family: orator;
+  /* font-family: orator; */
 }
 
 /* Custom Scrollbar */
