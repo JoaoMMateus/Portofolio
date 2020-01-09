@@ -41,7 +41,7 @@
     }
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-      background: white; 
+      background: black; 
     }
 /* custom scrollbar end */
 
@@ -224,4 +224,20 @@
       text-align: justify;
       /* max-height: 20vh; */
       /* overflow: scroll; */
+    }
+
+    .content-text .read_more{
+      font-weight: bolder;
+      text-align: center;
+      background: whitesmoke;
+      -o-transition:color .2s ease-out, background .5s ease-in;
+      -ms-transition:color .2s ease-out, background .5s ease-in;
+      -moz-transition:color .2s ease-out, background .5s ease-in;
+      -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+      transition:color .2s ease-out, background .5s ease-in;
+    }
+    .content-text .read_more:hover{
+      cursor: pointer;
+      background-color:white;
     }
