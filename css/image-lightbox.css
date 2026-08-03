@@ -1,0 +1,52 @@
+/* Click-to-zoom overlay used by the EXPERIENCE and PROJECTS images */
+.zoomable{
+  cursor: zoom-in;
+  transition: transform .2s ease;
+}
+.zoomable:hover{
+  transform: scale(1.02);
+}
+
+#image-lightbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .85);
+  opacity: 0;
+  transition: opacity .25s ease;
+  cursor: zoom-out;
+  /* above the fixed footer (1030) and the dev banner (9999) */
+  z-index: 10000;
+}
+#image-lightbox.is-open{
+  display: flex;
+}
+#image-lightbox.is-visible{
+  opacity: 1;
+}
+#image-lightbox img{
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .6);
+  transform: scale(.85);
+  transition: transform .25s ease;
+}
+#image-lightbox.is-visible img{
+  transform: scale(1);
+}
+#image-lightbox .lightbox-close{
+  position: absolute;
+  top: 10px;
+  right: 22px;
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+}

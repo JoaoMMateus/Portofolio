@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Martins Mateus Joao - Certifications</title>
+    <link rel="stylesheet" href="./css/custom-body.css">
+    <link rel="stylesheet" href="./css/custom-footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/footer-contact.js"></script>
+</head>
+
+<header class="page-header" style="height: 10vh;">
+</header>
+<body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+    <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+      DEV BRANCH - not production
+    </div>
+    <script>
+      // Show the dev banner only outside production (local/dev hosts).
+      (function () {
+        var h = location.hostname;
+        var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+        if (isDev) document.getElementById("dev-banner").style.display = "block";
+      })();
+    </script>
+    <div class="container">
+        <div class="row">
+          <!-- first column -->
+          <div id="custom-menu" class="col-sm-5 col-md-4 col-lg-4 fadein" style="text-align: right; border-right: black 2px solid;">
+            <div class="row">
+              <div class="col-md-12" style="margin-top: 25vh;">
+                <div class="row">
+                  <div id="PrenomTitre" class="col-md-12">João</div>
+                  </div>
+                <div class="row Name-Title">
+                  <div id="NomTitre" class="col-md-12">MARTINS MATEUS</div>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-md-12" style="padding-right: 0%; padding-left: 50%;">
+                <nav class="navbar navbar-light flex-column" id="menu">
+                  <!-- no nav-link class: it would make scrollspy treat the back
+                       link as one of the page sections -->
+                  <a class="nav-back" href="./index.html#certifications">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> BACK
+                  </a>
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#kubernetes">KUBERNETES</a>
+                    </li>
+                    <!-- add one li per certification group, matching a section below -->
+                  </ul>
+                </nav>
+              </div>
+              </div>
+            </div>
+          <!-- second column -->
+          <div id="content" class="col-sm-7 col-md-8 col-lg-8 fadein" data-spy="scroll" data-target="#menu" data-offset="50" style=" height: 80vh; background-color:whitesmoke;overflow-y: scroll; scroll-behavior: smooth;">
+            <div id="kubernetes" class="content-title cert-page-top">KUBERNETES</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Foundation (L1) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l1-foundation-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Associate (L2) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l2-associate-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Professional (L3) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l3-professional-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <!-- add more col-md-6 .certification-item blocks here -->
+                </div>
+              </div>
+            <br>
+            <!-- Next group - copy this block, give it an id, and add the matching nav li above
+            <div id="group-id" class="content-title">GROUP NAME</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Certification name</div>
+                  <div class="content-date-and-location">YEAR | ISSUER</div>
+                  <a class="certificate-link" href="./certificates/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            -->
+            </div>
+          </div>
+        </div>
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="all"></ul>
+          <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+      <!-- Footer -->
+</body>
+</html>

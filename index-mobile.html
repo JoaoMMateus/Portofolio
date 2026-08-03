@@ -1,17 +1,32 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Martins Mateus Joao - Portofolio</title>
     <link rel="stylesheet" href="./css/mobile-custom-body.css">
     <link rel="stylesheet" href="./css/custom-footer.css">
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/image-lightbox.css">
     
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/image-lightbox.js"></script>
+    <script src="./js/footer-contact.js"></script>
 </head>
 <body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+  <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+    DEV BRANCH - not production
+  </div>
+  <script>
+    // Show the dev banner only outside production (local/dev hosts).
+    (function () {
+      var h = location.hostname;
+      var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+      if (isDev) document.getElementById("dev-banner").style.display = "block";
+    })();
+  </script>
   <!-- align all element to center -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="menu">
     <!-- align divs one on the other on the middle -->
@@ -25,16 +40,25 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#active">ActivRandome</a>
+            <a class="nav-link" href="#about-me">ABOUT ME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#div_id">divid</a>
+            <a class="nav-link" href="#education">EDUCATION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Linktwo">divid</a>
+            <a class="nav-link" href="#certifications">CERTIFICATIONS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Linkthree">divid</a>
+            <a class="nav-link" href="#experience">EXPERIENCE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">SKILLS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#extracurricular-activities">EXTRACURRICULAR ACTIVITIES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">PROJECTS</a>
           </li>
         </ul>
       </div>
@@ -45,98 +69,698 @@
           <div class="col-md-12" style="height: 10vh;"></div>
         </div>
         <div class="row">
-          <!-- second column -->
-          <!-- put size of div at x% top and bottom and right window  -->
-          <div id="content" class="col-md-12 fadein" data-spy="scroll" data-target="#menu" data-offset="50" style=" height: 80vh; background-color:whitesmoke;overflow-y: scroll; scroll-behavior: smooth;">
-            <!-- <code> About Me </code>
-            <br><br><br> -->
-            <div id="active"> rightside <br></div>
-            <hr class="line-divider" align="left">
-            Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
-Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
-Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
-Reading is easier, too, in the new Reading view. 
+          <!-- single column content, stacked for phone display -->
+          <div id="content" class="col-md-12 fadein" data-spy="scroll" data-target="#menu" data-offset="50" style=" height: 80vh; background-color:whitesmoke;overflow-y: auto; scroll-behavior: smooth;">
+            <div id="about-me" class="content-title">ABOUT ME</div>
+            <hr class="under-line" align="left">
+            <div class="container-about-me">
+              <div class="content-text" id="about-me-text">
+                <div class="part-one">
+                  <p>Computer science professional with a master's degree and around six years of experience at Nokia in Lisbon, starting with an internship and growing into a software engineer role. Alongside development, I have worked hands-on with production systems, including fixing bugs, debugging issues, and supporting deployments with Docker and Kubernetes.</p>
+                  <p>I connect well with people, adapt quickly to new environments, and perform effectively under pressure. I am punctual, enthusiastic, motivated to take on new technical challenges, and always eager to learn. I work well in teams and pick up new skills quickly.</p>
+                  </div>
+                <br>
+                <div class="part-two">
+                  My qualities: organized, determined, flexible, adaptable, detail-oriented, reliable.
+                  </div>             
+                </div>
+              </div>
             <br>
-            <img id="currentPhoto" src="./images/Augmented_Reality.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-            <br><br><br>
-            <div id="div_id">CustomTitle</div>
-            <hr class="line-divider" align="left">
-            <div class="exp-title">experience title</div><br>
-            <i>textdate</i><br>
-            <p>
-            Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
-Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
-Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
-Reading is easier, too, in the new Reading view. 
-            </p>
+            <div id="education" class="content-title">EDUCATION</div>
+              <hr class="under-line" align="left">
+            <div class="container-education">
+              <div class="content-second-title">Computer and Information Systems Specialist</div>
+              <div class="content-date-and-location">2017 - 2019 | EPSI | MONTPELLIER</div>
+              <br>
+              <div class="content-second-title">Concepteur integrateur DevOps</div>
+              <div class="content-date-and-location">2016 | EPSI | MONTPELLIER</div>
+              <br>
+              <div class="content-second-title">High School Diploma STI2D</div>
+              <div class="content-date-and-location">2014 | VICTOR HUGO COLLEGE | LUNEL</div>
+              <br>
+              </div>
             <br>
-            <img id="currentPhoto" src="SomeImage.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-            <br><br><br>
-            <div id="linktwo">CustomTitle</div>
-            <hr class="line-divider" align="left">
-            Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
-Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
-Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
-Reading is easier, too, in the new Reading view.
+            <div id="certifications" class="content-title">CERTIFICATIONS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-12 col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Foundation (L1) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l1-foundation-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-12 col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Associate (L2) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l2-associate-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-12 col-md-6 certification-item todo-highlight">
+                  <div class="content-second-title">Professional (L3) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l3-professional-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <!-- add more col .certification-item blocks here -->
+                <div class="col-12 col-md-6 certification-item">
+                  <div class="content-second-title">All certifications</div>
+                  <a class="certificate-link" href="./certifications-mobile.html">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i> See the full list
+                  </a>
+                  </div>
+                </div>
+              </div>
             <br>
-            <img id="currentPhoto" src="./images/W.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-            <br><br><br>
-            <div id="Linkthree">CustomTitle</div>
-            <hr class="line-divider" align="left">
-            <blockquote class="blockquote">
-              <p class="mb-0"></p>
-              <footer class="blockquote-footer"> <cite title="Source Title">date</cite></footer>
-            </blockquote>
-            Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
-To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.
-Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme.
-Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.
-Reading is easier, too, in the new Reading view.
+            <div id="experience" class="content-title">EXPERIENCE</div>
+            <hr class="under-line" align="left">
+            <div class="container container-experience">
+              <div class="row">
+                <div class="col-md-12 exp-text-column">
+                  <div class="stage-nokia">
+                    <div class="content-under-title"> 
+                        NOKIA
+                      </div>
+                    <div class="content-date"> 
+                        2020 - AUGUST 2026 | LISBON
+                      </div>
+                    <div class="content-job-title">
+                        Software engineer
+                      </div>
+                    <div class="content-text about-experience">
+                      I worked for Nokia, a global supplier of telecommunications equipment and software, on products that
+                      operators use to manage and monitor their networks. I joined the team as an intern and grew into a
+                      software engineer role. My work covered the whole life of the product rather than a single stage.
+                      I developed new features, fixed bugs and investigated issues reported on live systems, which often
+                      meant following a problem through logs across several services before I could reproduce it locally.
+                      A large part of my time went to the production side: I supported releases and deployments of
+                      containerised services with Docker and Kubernetes on Linux, and I maintained the Jenkins pipelines
+                      that built, tested and delivered them, including on cloud environments. I also wrote Python tooling
+                      and automated tests, to take repetitive steps away from the team and to catch regressions before
+                      they reached a customer. When an operator escalated a problem, I was one of the people
+                      troubleshooting it directly, which taught me to stay methodical under pressure and to explain
+                      technical findings to people who are not engineers.
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img class="skill-image" src="./images/stage/NAC_OAM_Launchpad.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12 exp-text-column">
+                  <div class="stage-vestas">
+                    <div class="content-under-title"> 
+                        VESTAS
+                      </div>
+                    <div class="content-date"> 
+                        2018 - 2019 | MONTPELLIER
+                      </div>
+                    <div class="content-job-title">
+                        Analysis software developer assistant
+                      </div>
+                    <div class="content-text about-experience">
+                      Lately, I was working for Vestas who is a leading company in wind turbine technologies. 
+                      They provide a large variety of tools to manage the turbines and to monitor the energy produce 
+                      as well as building the turbine and installing them. I was assigned different kinds of missions. 
+                      The first one was to create an app to synchronise data from an excel file into a SQL database. 
+                      I created an add-in for excel in C# with entity framework so that the end customer only has to open the excel file. 
+                      After that I was assigned to the support of an asp.net app, where I create and give users access to the app as well as maintain it. 
+                      The third mission was the update of a SharePoint page to add a download option to a list. 
+                      I used InfoPath to modify and upload the page. 
+                      Finally, I was asked to create an app to verify the presence of signatures in PDF files. 
+                      So, I created a formless app in C# with tasks running in background that check PDF files and 
+                      send an email to the person who didn't sign the file. I also documented the code for next person 
+                      who will modify it as well as some notes on a OneNote and I created some documents that explains 
+                      how to use all the apps I created to the users.
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img class="skill-image" src="./images/stage/vestas.PNG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12 exp-text-column">
+                  <div class="stage-akantha">
+                    <div class="content-under-title"> 
+                        AKANTHA
+                      </div>
+                    <div class="content-date"> 
+                        2016 - 2018 | NÎMES
+                      </div>
+                    <div class="content-job-title">
+                        Web developer
+                      </div>
+                    <div class="content-text about-experience">
+                      In this work-study contract, I was working for a company that works for lawyers by providing them with client file management software and local data storage services or outsourcing on Akantha premises. 
+                      The mission that was assigned to me was the creation of a web application to replace the old one which was no longer up to date. 
+                      The app is supposed to allow lawyers to consult client files on any device. 
+                      I had carried out a technological watch on different technologies such as Laravel or Phalcon PHP. 
+                      However, the servers used by Akantha (WSDL) do not allow the use of such framework. 
+                      Instead, I opt for the use of soap protocol with basic PHP and with the help of a facade to communicate with Akantha's servers. 
+                      When I left the company, the web application web was online, on a reused server of Akantha with Xampp installed and I wrote documentation for the next person who will be working on this app.
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img class="skill-image" src="./images/stage/akantha.PNG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12 exp-text-column">
+                  <div class="stage-technologiasimaginadas">
+                    <div class="content-under-title"> 
+                        TECHNOLOGIAS IMAGINADAS
+                      </div>
+                    <div class="content-date"> 
+                        January - March 2016 | LISBON
+                      </div>
+                    <div class="content-job-title">
+                        Software developer
+                      </div>
+                    <div class="content-text about-experience">
+                      During this second internship, which I did in a Portuguese company,
+                      I realised an application in C#. The company develops and provides
+                      technologies and services in the fields of IT, communications and business systems.
+                      The mission given to me was to realise an app for a client of the company, motorway which sells new motorcycles as well as used motorcycles. 
+                      The app must be compatible with old windows systems more specifically Windows XP. 
+                      And generate sales quotes for new or used motorcycles but also purchase quotes for 
+                      used motorcycles when a client exchanges its old motorcycle for a new one. 
+                      To meet this demand, I realise a C# application which uses WPF (Windows Presentation Foundation) 
+                      to display the data and the preview of the generated quotes. The app connects to an 
+                      SQL database that I created, to keep a history of the quotes created by the app 
+                      as well as the data required to create the quotes. 
+                      At the end of this internship, I realised documentation on how to use the application as my tutor was the one to install the app and the database on client infrastructure.
+                      </div>
+                    <br>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img class="skill-image" src="./images/stage/timotorway.PNG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12 exp-text-column">
+                  <div class="stage-mateusemartins">
+                    <div class="content-under-title"> 
+                        MATEUS & MARTINS LDA
+                      </div>
+                    <div class="content-date"> 
+                        June - July 2015 | CASTELO BRANCO
+                      </div>
+                    <div class="content-job-title">
+                        Web developer
+                      </div>
+                    <div class="content-text about-experience">
+                      This was my first internship I completed during my studies at EPSI, I worked for a small company that assembles and installs windows, doors, gates and others. 
+                      In this internship I was asked to realise two things. 
+                      The first was a website to showcase the work done by the company as well as the tailor-made realisation for customers. 
+                      For this purpose, I realise a website using what I knew best which was the basics of PHP, HTML and CSS. 
+                      To host the website, I have learned to use Apache with WampServer. 
+                      The second was to realise an app to manage the inventory of materials used by the company. 
+                      To realise this app, I used what I have already put in place by setting Apache to host another website and I used the same technology: PHP, HTML and CSS. To store the inventory data, I used a MySQL database with phpMyAdmin to manage it. 
+                      At the end of this internship, I explained to the company what to do next. I gave them the source code of the website so they could put it online when they subscribed to a hosting plan like those offered by OVH. 
+                      The app to manage the inventory is used locally inside the company.
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img class="skill-image" src="./images/stage/martinsemateuslda.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              </div>
             <br>
-          </div>
+            <div id="skills" class="content-title">SKILLS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-skills">
+              <div class="row row-title-skills">PROFESSIONAL</div>
+              <br>
+              <div class="row second-title-skills todo-highlight">CODING</div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/Csharp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">C#</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/HTML5.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">HTML</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/csspng.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">CSS</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/javascript.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">JavaScript</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/PHP.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PHP</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/symfony.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Symfony</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/entity_framework.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Entity Framework</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/visual-basic.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Visual Basic</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/jquery.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">JQuery</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/bootstrap.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Bootstrap</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/nodejspng.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Node.js</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row second-title-skills todo-highlight">PROGRAMS</div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/Visual_Studio_2017.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Visual studio</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/Visual_Studio_Code.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Visual Studio Code</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/office_365.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Office 365</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/phpStorm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PhpStorm</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/unity3D.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Unity 3D</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/Maya.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">MAYA</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/substance.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Substance</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/solidworks.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">SolidWorks</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/vmware.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">VMware</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/WampServer.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">WAMP</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/xampp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">XAMPP</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/gitkraken.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">GitKraken</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/InfoPath_2013.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">infoPath</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/postman.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PostMan</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/arduino.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Arduino</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/staruml.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">StarUML</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/visualparadigm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Visual Paradigm</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/sourcetree.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">SourceTree</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/docker.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Docker</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/tableau.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Tableau Public</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row second-title-skills todo-highlight">SERVICES</div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/tfs.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Team Foundation Server (Azure DevOps)</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/github.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">GitHub</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/gitlab.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">GitLab</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/bitbucket.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">BitBucket</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/azure.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Microsoft Azure</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row second-title-skills todo-highlight">DATABASES</div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/mongo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">MongoDB</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/phpMyAdmin.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PhpMyAdmin</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/Microsoft_SQL_Server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">SQL Server</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/oracle.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Oracle</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row second-title-skills todo-highlight">OS</div>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/windows_logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Windows</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/Windows-10-logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Windows Server</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/centos_logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">CentOS</div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/ubuntu-logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Ubuntu</div>
+                  </div>
+                </div>
+              <br>
+              <div class="row row-title-skills">LANGUAGES</div>
+              <br>
+              <div class="row row-skills">
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/flag/Flag_of_Portugal-4by3.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">
+                    <div class="skill-language-name">PORTUGUESE</div>
+                    <div class="skill-language-level">Native</div>
+                    </div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/flag/Flag_of_France-4by3.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">
+                    <div class="skill-language-name">FRENCH</div> 
+                    <div class="skill-language-level">Native</div>
+                    </div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/flag/Flag_for_English-4by3.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">
+                    <div class="skill-language-name">ENGLISH</div>
+                    <div class="skill-language-level">Working knowledge</div>
+                    </div>
+                  </div>
+                <div class="col-6 col-md-3 img-element">
+                  <img class="skill-image" src="./images/flag/Flag_of_Spain-4by3.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">
+                    <div class="skill-language-name">SPANISH</div>
+                    <div class="skill-language-level">Conversational</div>
+                    </div>
+                  </div>
+                </div>
+              <br>
+              </div>
+            <br>
+            <div id="extracurricular-activities" class="content-title">EXTRACURRICULAR ACTIVITIES</div>
+            <hr class="under-line" align="left">
+            <div class="container-extracurricular-activities">
+              <div class="ea-bia">
+                <div class="content-under-title"> 
+                  BIA | Brevet d'Initiation Aeronautique
+                  </div>
+                <div class="content-date"> 
+                  2013 | VICTOR HUGO COLLEGE | LUNEL
+                  </div>
+                <br>
+                </div>
+              </div>
+            <br>
+            <div id="projects" class="content-title">PROJECTS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="home-server-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    HOME SERVER HUB
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing
+                    </div>
+                  <div class="content-text">
+                    A self-hosted home server that centralises home automation and media services. The main machine runs Alpine Linux (32-bit) to make use of hardware I already had.
+                    </div>
+                  <div class="content-text">
+                    The project covers several areas, each at a different stage:
+                    <span class="more_text home-server-more" style="display:none;">
+                      <ul class="project-status-list">
+                        <li class="status-done"><strong>Media</strong> - A Jellyfin server connected to the TV streams content from the Alpine machine over a shared network drive.</li>
+                        <li class="status-planned"><strong>Garden irrigation</strong> - Sector-based watering control via an ESP32 driving an electrovalve, managed by the Alpine machine.</li>
+                        <li class="status-dropped"><strong>Gate access</strong> - Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.</li>
+                        </ul>
+                      </span>
+                    <span class="read_more home-server-expand"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+                    <span class="read_less home-server-collapse" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/home-server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="image-note">Illustration generated with AI</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="ai-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    WUMPUS
+                    </div>
+                  <div class="content-date"> 
+                    2017
+                    </div>
+                  <div class="content-text about-project">
+                    This project aims to develop an artificial intelligence that will participate 
+                    in the game called "The World of Wumpus". Artificial intelligence will have to 
+                    move around the playground to reach the treasure without getting caught by the Wumpus. 
+                    This one is a monster that defends its cave, this one being the playground. 
+                    In this work the visual appearance was not the main goal to ask. 
+                    The idea was to allow the AI to move according to the data it receives by moving from box to box. 
+                    The smell of Wumpus allows the AI to recognize its presence on one of the adjacent boxes. 
+                    The flicker of gold signals the presence of the treasure in the box and thus indicates to the AI the achievement of its objective.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/wumpus.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="ra-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    Augmented Reality
+                    </div>
+                  <div class="content-date"> 
+                    2018
+                    </div>
+                  <div class="content-text about-project">
+                    In this Reconstructed Professional Situation (MSPR), 
+                    the main goal was to display a 3D model associated with an image that children could color. 
+                    The application should therefore be able to retrieve the colors present on the drawing and apply them to the 3D model. 
+                    Being intended for a very young audience, we therefore thought of adding an additional functionality: 
+                    interaction with the 3D model. 
+                    To illustrate this idea, we added a target that the 3D model will follow.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/Unity_Position.JPG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="opticook-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    OPTICOOK
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    Application in C# using the concept of object-oriented programming. 
+                    The Microsoft Entity Framework is therefore used to create an application to manage an individual's food stock, 
+                    informing the user of the impending expiration dates of each product while 
+                    offering recipes selected based on the amount of products in stock.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/opticook.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="optibench-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    OPTIBENCH
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    During this school project, the goal was to create a web application with the Symfony Framework. 
+                    With the team I was in, we created a web application that lists different computer component and 
+                    allows a client to compare them and thus set up a computer.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/optibench.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="unity-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    Unity
+                    </div>
+                  <div class="content-date"> 
+                    2016 - Ongoing
+                    </div>
+                  <div class="content-text about-project">
+                    In order to use Unity3D in personal projects, 
+                    I followed different Unity tutorials including the making of a space shooter game. 
+                    Currently, I am testing the free tools offered in the unity store.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/unityproject.gif" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <br>
+            </div>
+          <script> /* hide long text to image size | "..." expands, "^" collapses */
+              $(function () {
+                var max_length = 200; /* max visible length before truncating */
+                $('.about-experience, .about-project').each(function () {
+                  var $el = $(this);
+                  var html = $el.html();
+                  if (html.length > max_length) {
+                    var short_content = html.substr(0, max_length);
+                    var long_content = html.substr(max_length);
+                    /* more_text sits right after the short text so it flows inline when shown;
+                       the buttons render below via their block CSS */
+                    $el.html(
+                      short_content +
+                      '<span class="more_text" style="display:none;">' + long_content + '</span>' +
+                      '<span class="read_more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>' +
+                      '<span class="read_less" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>'
+                    );
+                    var $more = $el.find('.more_text');
+                    var $expand = $el.find('.read_more');
+                    var $collapse = $el.find('.read_less');
+                    $expand.click(function () {
+                      $more.show();
+                      $expand.hide();
+                      $collapse.show();
+                    });
+                    $collapse.click(function () {
+                      $more.hide();
+                      $collapse.hide();
+                      $expand.show();
+                    });
+                  }
+                });
+
+                /* expand/collapse for the home server feature list */
+                $('.home-server-expand').click(function () {
+                  $('.home-server-more').show();
+                  $('.home-server-expand').hide();
+                  $('.home-server-collapse').show();
+                });
+                $('.home-server-collapse').click(function () {
+                  $('.home-server-more').hide();
+                  $('.home-server-collapse').hide();
+                  $('.home-server-expand').show();
+                });
+              });
+            </script>
         </div>
     </div>
+    <!-- Click-to-zoom overlay for the experience and project images -->
+    <div id="image-lightbox">
+      <span class="lightbox-close" aria-hidden="true">&times;</span>
+      <img src="" alt="">
+      </div>
     <!-- Footer -->
     <footer class="page-footer fixed-bottom">
       <!-- Footer Elements -->
       <div class="container">
-        <!-- Social buttons -->
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a target="_blank" href="https://github.com/JoaoMMateus">
-                <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <a target="_blank" href="https://www.linkedin.com/in/joao-martins-mateus/">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <a class="btn-floating mx-1" target="_blank" href="https://docs.microsoft.com/en-us/users/joaoMMateus/">
-                <i class="fa fa-windows" aria-hidden="true"></i>
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <!-- <a href="mailto:joao.martinsmateus@outlook.com?Subject=Hello%20again" target="_top">joao.martinsmateus@outlook.com</a> -->
-              <a href="mailto:joao.martinsmateus@outlook.com" target="_top">
-                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                joao.martinsmateus@outlook.com
-              </a>
-              </li>
-            <li class="list-inline-item">
-              <a href="sms:+33695591672?body=[MESSAGE]">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>  
-              <a href="tel:+33695591672" >
-                <i class="fa fa-phone-square" aria-hidden="true"></i>
-                  06 95 59 16 72
-                </a>
-              </li>
-            </ul>
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="minimal"></ul>
           <!-- Social buttons -->
         </div>
         <!-- Footer Elements -->

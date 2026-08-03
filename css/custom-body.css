@@ -1,3 +1,63 @@
+/* =========================================================================
+   TODO HIGHLIGHT - temporary markers for content that still needs work.
+   To remove ALL markers at once, delete this whole block (and, optionally,
+   the `todo-highlight` classes in the HTML). Nothing else depends on it.
+   ========================================================================= */
+.todo-highlight {
+  border: 3px dashed #ff5722 !important;
+  border-radius: 6px;
+  padding: 8px !important;
+  margin-bottom: 6px;
+  background: rgba(255, 87, 34, 0.07);
+  position: relative;
+}
+.todo-highlight::before {
+  content: "TODO";
+  position: absolute;
+  top: -11px;
+  left: 8px;
+  background: #ff5722;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1px 7px;
+  border-radius: 3px;
+  z-index: 5;
+}
+/* ===================== END TODO HIGHLIGHT ===================== */
+
+/* Status bullet list (Done / Ongoing / Dropped) used in projects */
+.project-status-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 6px 0;
+}
+.project-status-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 6px;
+}
+.project-status-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+.status-done::before    { content: "\25CF\00a0"; color: #222; } /* round    = done            */
+.status-planned::before { content: "\25A0\00a0"; color: #222; } /* square   = planned/ongoing */
+.status-dropped::before { content: "\25B2\00a0"; color: #222; } /* triangle = dropped         */
+
+/* Small note placed under a project image */
+.image-note {
+  font-size: smaller;
+  font-style: oblique;
+  font-weight: lighter;
+  text-align: right;
+  padding-top: 4px;
+  color: #666;
+}
+
 /* import fonts */
     /* @font-face { */
       /* font-family: orator; */
@@ -88,6 +148,21 @@
       background-color: white;
       padding-right: 5px;
     }
+    /* Back link on sub-pages. The nav is rtl, so force ltr to keep the arrow
+       ahead of the label; everything else mirrors nav#menu ul li a. */
+    nav#menu a.nav-back{
+      direction: ltr;
+      width: max-content;
+      padding: 5px;
+      margin-bottom: 1.5rem;
+      font-family: lane;
+      font-size: medium;
+      color: #696969;
+    }
+    nav#menu a.nav-back:hover{
+      color: black;
+      text-decoration: none;
+    }
 /* nav menu left end*/
 
 /* content */
@@ -135,6 +210,30 @@
       font-weight: bolder;
       font-size: x-large;
       text-align: left;
+    }
+    /* CERTIFICATIONS */
+    /* First title of a sub-page, lined up with the name block in the left column
+       the same way #about-me is on the main page. */
+    .cert-page-top{
+      margin-top: 20vh;
+    }
+    .container-certifications{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .container-certifications .certification-item{
+      margin-bottom: 1.5rem;
+    }
+    .certificate-link{
+      display: inline-block;
+      margin-top: 4px;
+      font-weight: bolder;
+      color: #696969;
+      text-decoration: none;
+    }
+    .certificate-link:hover{
+      color: black;
+      text-decoration: underline;
     }
     /* SKILLS */
     .skill-image{
@@ -227,9 +326,12 @@
       /* overflow: scroll; */
     }
 
-    .content-text .read_more{
+    .content-text .read_more,
+    .content-text .read_less{
+      display: block;
       font-weight: bolder;
       text-align: center;
+      padding: 8px 0;
       background: whitesmoke;
       -o-transition:color .2s ease-out, background .5s ease-in;
       -ms-transition:color .2s ease-out, background .5s ease-in;
@@ -238,7 +340,8 @@
       /* ...and now override with proper CSS property */
       transition:color .2s ease-out, background .5s ease-in;
     }
-    .content-text .read_more:hover{
+    .content-text .read_more:hover,
+    .content-text .read_less:hover{
       cursor: pointer;
       background-color:white;
     }
