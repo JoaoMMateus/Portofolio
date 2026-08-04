@@ -193,26 +193,42 @@ font-family: orator;
   }
 /* nav menu left end*/
 
-/* CERTIFICATIONS */
-  .container-certifications{
+/* CERTIFICATIONS / DIPLOMAS */
+  .container-certifications,
+  .container-diplomas{
     padding-right: 0px;
     padding-left: 0px;
   }
-  .container-certifications .certification-item{
+  .container-certifications .certification-item,
+  .container-diplomas .diploma-item{
     margin-bottom: 1.5rem;
   }
-  .certificate-link{
+  .certificate-link,
+  .diploma-link{
     display: inline-block;
     margin-top: 4px;
     font-weight: bolder;
     color: #696969;
     text-decoration: none;
   }
-  .certificate-link:hover{
+  .certificate-link:hover,
+  .diploma-link:hover{
     color: black;
     text-decoration: underline;
   }
-/* CERTIFICATIONS end*/
+/* CERTIFICATIONS / DIPLOMAS end*/
+
+/* SKILLS */
+  /* Logos come in mixed aspect ratios, so the box is forced square and the
+     logo is centred inside it. Without this the captions of wide logos sit
+     higher than their neighbours. */
+  .img-element .skill-image{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+/* SKILLS end*/
 
 /* read more / read less buttons render below the text */
   .content-text .read_more,
@@ -234,6 +250,20 @@ font-family: orator;
     background-color:white;
   }
 /* read more / read less end*/
+
+/* sub-page heading that names the whole page, one level above its groups */
+  div#content div.page-title{
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  div#content hr.page-under-line{
+    width: 20%;
+    border-top-width: 3px;
+    border-color: black;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
 
 /* footer icons sized for finger tap */
   footer.page-footer div ul li{

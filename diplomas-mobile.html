@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Martins Mateus Joao - Diplomas</title>
+    <link rel="stylesheet" href="./css/mobile-custom-body.css">
+    <link rel="stylesheet" href="./css/custom-footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/footer-contact.js"></script>
+</head>
+<body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+  <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+    DEV BRANCH - not production
+  </div>
+  <script>
+    // Show the dev banner only outside production (local/dev hosts).
+    (function () {
+      var h = location.hostname;
+      var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+      if (isDev) document.getElementById("dev-banner").style.display = "block";
+    })();
+  </script>
+  <!-- align all element to center -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-simple" id="menu">
+    <a class="nav-back" href="./index-mobile.html#education" aria-label="Back">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </a>
+    <!-- align divs one on the other on the middle -->
+        <div class="justify-content-center" href="#" id="PrenomTitre">João</div>
+        <div class="justify-content-center" href="#" id="NomTitre">MARTINS MATEUS</div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12" style="height: 10vh;"></div>
+        </div>
+        <div class="row">
+          <!-- single column content, stacked for phone display -->
+          <div id="content" class="col-md-12 fadein" style=" height: 80vh; background-color:whitesmoke;overflow-y: auto; scroll-behavior: smooth;">
+            <div class="page-title">DIPLOMAS</div>
+            <hr class="under-line page-under-line" align="left">
+            <div id="higher-education" class="content-title">HIGHER EDUCATION</div>
+            <hr class="under-line" align="left">
+            <div class="container container-diplomas">
+              <div class="row">
+                <div class="col-12 col-md-6 diploma-item todo-highlight">
+                  <div class="content-second-title">Computer and Information Systems Specialist</div>
+                  <div class="content-date-and-location">2017 - 2019 | EPSI | MONTPELLIER</div>
+                  <!-- drop the file in ./diplomas/ and enable this link
+                  <a class="diploma-link" href="./diplomas/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                  </a>
+                  -->
+                  </div>
+                <div class="col-12 col-md-6 diploma-item todo-highlight">
+                  <div class="content-second-title">Concepteur integrateur DevOps</div>
+                  <div class="content-date-and-location">2016 | EPSI | MONTPELLIER</div>
+                  <!-- drop the file in ./diplomas/ and enable this link
+                  <a class="diploma-link" href="./diplomas/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                  </a>
+                  -->
+                  </div>
+                <!-- add more col .diploma-item blocks here -->
+                </div>
+              </div>
+            <br>
+            <div id="secondary-education" class="content-title">SECONDARY EDUCATION</div>
+            <hr class="under-line" align="left">
+            <div class="container container-diplomas">
+              <div class="row">
+                <div class="col-12 col-md-6 diploma-item todo-highlight">
+                  <div class="content-second-title">High School Diploma STI2D</div>
+                  <div class="content-date-and-location">2014 | VICTOR HUGO COLLEGE | LUNEL</div>
+                  <!-- drop the file in ./diplomas/ and enable this link
+                  <a class="diploma-link" href="./diplomas/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                  </a>
+                  -->
+                  </div>
+                </div>
+              </div>
+            <br>
+            <!-- Next group - copy this block and give it an id
+            <div id="group-id" class="content-title">GROUP NAME</div>
+            <hr class="under-line" align="left">
+            <div class="container container-diplomas">
+              <div class="row">
+                <div class="col-12 col-md-6 diploma-item">
+                  <div class="content-second-title">Diploma name</div>
+                  <div class="content-date-and-location">YEAR | SCHOOL | CITY</div>
+                  <a class="diploma-link" href="./diplomas/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            -->
+            </div>
+          </div>
+        </div>
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="minimal"></ul>
+          <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+    <!-- Footer -->
+</body>
+</html>

@@ -181,6 +181,18 @@
       font-size: xx-large;
       font-weight: bolder;
     }
+    /* Sub-page heading that names the whole page, sitting one level above the
+       content-title groups it contains. */
+    div#content div.page-title{
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+    div#content hr.page-under-line{
+      width: 12%;
+      border-top-width: 3px;
+      margin-bottom: 1.5rem;
+    }
     div#content div.content-date{
       font-size: larger;
     }
@@ -211,27 +223,31 @@
       font-size: x-large;
       text-align: left;
     }
-    /* CERTIFICATIONS */
+    /* CERTIFICATIONS / DIPLOMAS */
     /* First title of a sub-page, lined up with the name block in the left column
        the same way #about-me is on the main page. */
-    .cert-page-top{
+    .sub-page-top{
       margin-top: 20vh;
     }
-    .container-certifications{
+    .container-certifications,
+    .container-diplomas{
       padding-right: 0px;
       padding-left: 0px;
     }
-    .container-certifications .certification-item{
+    .container-certifications .certification-item,
+    .container-diplomas .diploma-item{
       margin-bottom: 1.5rem;
     }
-    .certificate-link{
+    .certificate-link,
+    .diploma-link{
       display: inline-block;
       margin-top: 4px;
       font-weight: bolder;
       color: #696969;
       text-decoration: none;
     }
-    .certificate-link:hover{
+    .certificate-link:hover,
+    .diploma-link:hover{
       color: black;
       text-decoration: underline;
     }
@@ -239,6 +255,15 @@
     .skill-image{
       padding-top: 10px;
       align-content: center;
+    }
+    /* Logos come in mixed aspect ratios, so the box is forced square and the
+       logo is centred inside it. Without this the captions of wide logos sit
+       higher than their neighbours. */
+    .img-element .skill-image{
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
     }
     .img-element:hover{
       background-color: white;

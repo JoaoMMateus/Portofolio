@@ -32,6 +32,10 @@ Portofolio/
 ├── index-mobile.html     # Mobile layout (work in progress / placeholder text)
 ├── certifications.html   # Desktop sub-page listing every certification by group
 ├── certifications-mobile.html # Mobile version of the certifications sub-page
+├── diplomas.html         # Desktop sub-page listing every diploma by education level
+├── diplomas-mobile.html  # Mobile version of the diplomas sub-page
+├── certificates/         # Certificate files linked from the certifications pages
+├── diplomas/             # Diploma files linked from the diplomas pages
 ├── package.json          # npm metadata and dependencies
 ├── css/                  # Bootstrap, Font Awesome, and custom styles
 │   ├── custom-body.css
