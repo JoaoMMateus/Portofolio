@@ -45,3 +45,6 @@ Server running at http://localhost:8080/
 (node:30072) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 
 9 update about me and EXP Nokia, talk about AI usage
+
+10 convert webpg into png
+
