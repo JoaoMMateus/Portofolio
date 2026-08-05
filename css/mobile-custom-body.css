@@ -194,14 +194,18 @@ font-family: orator;
 /* nav menu left end*/
 
 /* CERTIFICATIONS / DIPLOMAS */
-  .container-certifications,
-  .container-diplomas{
+  .container-certifications{
     padding-right: 0px;
     padding-left: 0px;
   }
   .container-certifications .certification-item,
-  .container-diplomas .diploma-item{
+  .container-education .diploma-item{
     margin-bottom: 1.5rem;
+  }
+  /* Qualification framework level, sits between the date line and the link. */
+  .diploma-equivalence{
+    font-size: small;
+    color: #696969;
   }
   .certificate-link,
   .diploma-link{

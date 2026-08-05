@@ -21,3 +21,7 @@ Examples:
    - `content-date-and-location` -> `YEAR | ISSUER`
    - the `certificate-link` `href` -> `./certificates/<your-file>`
 3. If the certification belongs to a new technology, copy the commented group block at the bottom of those pages instead, give it an `id`, and add a matching `li` to `nav#menu` in `certifications.html`.
+
+## Language tests
+
+Language certifications live in the LANGUAGES group of the certifications pages. The score report is also linked from the matching flag tile in SKILLS > LANGUAGES on `index.html` and `index-mobile.html`, so both places need updating when a new one is added or retaken.
