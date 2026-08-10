@@ -17,5 +17,4 @@ steps:
 
 - script: |
     npm install
-    node app-start.js
   displayName: 'npm install and build'
