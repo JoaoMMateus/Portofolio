@@ -1,5 +1,4 @@
 var http = require('http');
-var url = require('url');
 var fs = require('fs');
 var path = require('path');
 var DeviceDetector = require('device-detector-js');
@@ -67,12 +66,13 @@ const server = http.createServer(function  (req, res) {
     return res.end("405 Method Not Allowed");
   }
 
-  var q = url.parse(req.url, true);
-
+  // Take the path straight off the raw request target, dropping query and
+  // fragment. The raw form is deliberate: the WHATWG URL parser collapses "../"
+  // segments, which would hide traversal attempts from the checks below.
   // Decode percent-encoding so encoded traversal (e.g. %2e%2e%2f) is caught too.
   var pathname;
   try {
-    pathname = decodeURIComponent(q.pathname);
+    pathname = decodeURIComponent(req.url.split('#')[0].split('?')[0]);
   } catch (e) {
     return sendError(res, 400, "400 Bad Request");
   }
