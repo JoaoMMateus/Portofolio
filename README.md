@@ -128,3 +128,6 @@ tests/
 Each check prints `PASS`/`FAIL` and the runner ends with an aggregate count. Tests assert the *desired secure behaviour*, so a `FAIL` is an actionable finding rather than a broken test. Cases `01`–`05`, `07`, `09`, `11`, and `13` pass against the current server. The remaining cases document known gaps: `06_symlink_escape` and `08_null_byte` are real vulnerabilities (symlink escape via the lexical path guard, and a null-byte crash), while `10_http_methods` and `12_hardening_headers` are defense-in-depth TODOs.
 
 > Note: the scripts must use LF line endings (a CRLF shebang breaks under Bash/WSL).
+
+To highlight elements add the following class to the element:
+  <!-- add  todo-highlight to highlight the item -->
