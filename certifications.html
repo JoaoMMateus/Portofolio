@@ -1,0 +1,352 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Martins Mateus Joao - Certifications</title>
+    <link rel="stylesheet" href="./css/custom-body.css">
+    <link rel="stylesheet" href="./css/custom-footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/footer-contact.js"></script>
+</head>
+
+<header class="page-header" style="height: 10vh;">
+</header>
+<body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+    <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+      DEV BRANCH - not production
+    </div>
+    <script>
+      // Show the dev banner only outside production (local/dev hosts).
+      (function () {
+        var h = location.hostname;
+        var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+        if (isDev) document.getElementById("dev-banner").style.display = "block";
+      })();
+    </script>
+    <div class="container">
+        <div class="row">
+          <!-- first column -->
+          <div id="custom-menu" class="col-sm-5 col-md-4 col-lg-4 fadein" style="text-align: right; border-right: black 2px solid;">
+            <div class="row">
+              <div class="col-md-12" style="margin-top: 25vh;">
+                <div class="row">
+                  <div id="PrenomTitre" class="col-md-12">João</div>
+                  </div>
+                <div class="row Name-Title">
+                  <div id="NomTitre" class="col-md-12">MARTINS MATEUS</div>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-md-12" style="padding-right: 0%; padding-left: 50%;">
+                <nav class="navbar navbar-light flex-column" id="menu">
+                  <!-- no nav-link class: it would make scrollspy treat the back
+                       link as one of the page sections -->
+                  <a class="nav-back" href="./index.html#certifications">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> BACK
+                  </a>
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#kubernetes">KUBERNETES</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#coding">CODING</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#devops">DEVOPS &amp; TOOLING</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#cloud">CLOUD</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#ai">AI</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#languages">LANGUAGES</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#other">OTHER</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#udemy">UDEMY</a>
+                    </li>
+                    <!-- add one li per certification group, matching a section below -->
+                  </ul>
+                </nav>
+              </div>
+              </div>
+            </div>
+          <!-- second column -->
+          <div id="content" class="col-sm-7 col-md-8 col-lg-8 fadein" data-spy="scroll" data-target="#menu" data-offset="50" style=" height: 80vh; background-color:whitesmoke;overflow-y: scroll; scroll-behavior: smooth;">
+            <div class="page-title sub-page-top">CERTIFICATIONS</div>
+            <hr class="under-line page-under-line" align="left">
+            <div id="kubernetes" class="content-title">KUBERNETES</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Foundation (L1) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l1-foundation-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Associate (L2) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l2-associate-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Professional (L3) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l3-professional-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Red Hat OpenShift Administration for the Nokia Access Controller</div>
+                  <div class="content-date-and-location">2023 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-openshift-administration-2023.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Kubernetes: Native Tools</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-kubernetes-native-tools-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Learning Kubernetes</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-learning-kubernetes-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <!-- add more col-md-6 .certification-item blocks here -->
+                </div>
+              </div>
+            <br>
+            <div id="coding" class="content-title">CODING</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Agile Software Development - Refresher for DevOps</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-agile-software-development-refresher-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Professional (L3) Technical Debt Prevention for Software Development Professionals</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-technical-debt-l3-professional-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Foundation (L1) CNS Technical Debt Prevention for Software Development Professionals</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-technical-debt-l1-foundation-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Programming Foundations: Algorithms</div>
+                  <div class="content-date-and-location">2022 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-programming-foundations-algorithms-2022.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">TypeScript Essential Training (2016)</div>
+                  <div class="content-date-and-location">2022 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-typescript-essential-training-2022.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Agile Software Development: Clean Coding Practices</div>
+                  <div class="content-date-and-location">2021 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-agile-clean-coding-practices-2021.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="devops" class="content-title">DEVOPS &amp; TOOLING</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Robot Framework Test Automation: Jenkins CI and Git Version Control</div>
+                  <div class="content-date-and-location">2021 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-robot-framework-jenkins-git-2021.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Git Essential Training: The Basics</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-git-essential-training-basics-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Learning Confluence</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-learning-confluence-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="cloud" class="content-title">CLOUD</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Cloud Architecture: Core Concepts</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-cloud-architecture-core-concepts-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="ai" class="content-title">AI</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Cursor Training - Required for Access</div>
+                  <div class="content-date-and-location">2026 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-cursor-training-2026.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">GitHub Copilot: Your AI pair programmer - Introduction to CNS</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-github-copilot-introduction-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Introduction to Prompt Engineering for Generative AI</div>
+                  <div class="content-date-and-location">2023 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-prompt-engineering-generative-ai-2023.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="languages" class="content-title">LANGUAGES</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">TOEIC Listening and Reading - 900/990 (B2)</div>
+                  <div class="content-date-and-location">2018 | ETS | EPSI MONTPELLIER</div>
+                  <a class="certificate-link" href="./certificates/ets-toeic-listening-reading-2018.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Score report
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="other" class="content-title">OTHER</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Avamar Virtual Edition (AVE) Introduction</div>
+                  <div class="content-date-and-location">2026 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-avamar-virtual-edition-introduction-2026.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Introduction to Nokia Assurance Center</div>
+                  <div class="content-date-and-location">2025 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-assurance-center-introduction-2025.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">The Cybersecurity Threat Landscape (2019)</div>
+                  <div class="content-date-and-location">2022 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-cybersecurity-threat-landscape-2022.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Build a Raspberry Pi Media Server</div>
+                  <div class="content-date-and-location">2020 | LINKEDIN LEARNING</div>
+                  <a class="certificate-link" href="./certificates/linkedin-raspberry-pi-media-server-2020.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <div id="udemy" class="content-title">UDEMY</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Learn Basic Commands in Linux Shell</div>
+                  <div class="content-date-and-location">2019 | UDEMY</div>
+                  <a class="certificate-link" href="./certificates/udemy-linux-shell-basic-commands-2019.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            <!-- Next group - copy this block, give it an id, and add the matching nav li above
+            <div id="group-id" class="content-title">GROUP NAME</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Certification name</div>
+                  <div class="content-date-and-location">YEAR | ISSUER</div>
+                  <a class="certificate-link" href="./certificates/FILE.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                </div>
+              </div>
+            <br>
+            -->
+            </div>
+          </div>
+        </div>
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="all"></ul>
+          <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+      <!-- Footer -->
+</body>
+</html>

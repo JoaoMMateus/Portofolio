@@ -1,0 +1,43 @@
+{
+  "email": "joao.martinsmateus@outlook.com",
+  "phone": "+351912773755",
+  "phoneDisplay": " 912 773 755 ",
+  "links": [
+    {
+      "icon": "fa-github-square",
+      "label": "GitHub",
+      "href": "https://github.com/JoaoMMateus",
+      "newTab": true
+    },
+    {
+      "icon": "fa-linkedin-square",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/joao-martins-mateus/",
+      "newTab": true
+    },
+    {
+      "icon": "fa-windows",
+      "label": "Microsoft",
+      "href": "https://docs.microsoft.com/en-us/users/joaoMMateus/",
+      "newTab": true,
+      "class": "btn-floating mx-1"
+    },
+    {
+      "icon": "fa-envelope",
+      "label": "{email}",
+      "href": "mailto:{email}",
+      "target": "_top"
+    },
+    {
+      "icon": "fa-phone-square",
+      "label": "{phoneDisplay}",
+      "href": "tel:{phone}",
+      "showLabel": "always"
+    },
+    {
+      "icon": "fa-commenting-o",
+      "label": "{phoneDisplay}",
+      "href": "sms:{phone}?body=[MESSAGE]"
+    }
+  ]
+}

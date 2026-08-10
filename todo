@@ -1,0 +1,49 @@
+# 1 Add experience
+    - Nokia Dev
+    - Nokia Sys
+
+## 2 colapse experience
+#    - MateusMartins
+#    - TECHNOLOGIAS IMAGINADAS
+
+## 3 Add skills (placeholder images, logos still missing)
+#    -  code
+#        python
+#        bash
+#    -  Programs
+#        cursor
+#    - Services
+#        Openstack
+#        redhat openshift (OCP)
+#        wsl
+#        jenkins
+#        gerrit
+#        jira
+#        confluence
+#    - Databases
+#        MariaDB
+#    - OS
+#        alpine linux
+
+# 4 reduce old skills highligh colors
+
+# 5 Home projects
+#    - repurpose old desktop 32bit
+#        1 RSS server
+#        2 "NAS" media on alpine
+#        3 manage electrovalve irigation
+#          esp32 + 9V electrovavle
+#    - rapsberry media server
+    
+## 6 Update phone numbers
+
+7 Scan diplomas and addto folder
+
+##8 check Deprecation warning
+# PS C:\Users\foo_f\Repos\Portofolio> node .\app-start.js --trace-deprecation
+# Server running at http://localhost:8080/
+# (node:30072) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+
+##9 update about me and EXP Nokia, talk about AI usage
+
+##10 convert webpg into png

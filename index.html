@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/image-lightbox.css">
     
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/image-lightbox.js"></script>
+    <script src="./js/footer-contact.js"></script>
 </head>
 
 <header class="page-header" style="height: 10vh;">
@@ -26,6 +29,17 @@
   </div> -->
 </header>
 <body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+    <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+      DEV BRANCH - not production
+    </div>
+    <script>
+      // Show the dev banner only outside production (local/dev hosts).
+      (function () {
+        var h = location.hostname;
+        var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+        if (isDev) document.getElementById("dev-banner").style.display = "block";
+      })();
+    </script>
     <div class="container">
         <div class="row">
           <!-- first column -->
@@ -51,6 +65,9 @@
                       <a class="nav-link" href="#education">EDUCATION</a>
                     </li>
                     <li>
+                      <a class="nav-link" href="#certifications">CERTIFICATIONS</a>
+                    </li>
+                    <li>
                       <a class="nav-link" href="#experience">EXPERIENCE</a>
                     </li>
                     <li>
@@ -74,15 +91,13 @@
             <div class="container-about-me">
               <div class="content-text" id="about-me-text">
                 <div class="part-one">
-                  Fresh graduate with master degree in computer science. 
-                  I am very punctual and motived for new experiences. 
-                  Based on my experiences, I can connect well with people and adapt quickly in new environment, and even work under pressure. 
-                  I am an enthusiastic individual who’s always willing to learn. 
-                  I am able to work in team and learn quickly new skills.
+                  <p>Computer science professional with a master's degree and around six years of experience at Nokia in Lisbon, starting with an internship and growing into a software engineer role. Alongside development, I have worked hands-on with production systems, including fixing bugs, debugging issues, and supporting deployments with Docker and Kubernetes.</p>
+                  <p>I work with AI development tools such as Cursor and GitHub Copilot on a daily basis, using them to move faster on routine work and to help debug code and CI/CD pipelines, while reviewing what they produce before it reaches a codebase.</p>
+                  <p>I connect well with people, adapt quickly to new environments, and perform effectively under pressure. I am punctual, enthusiastic, motivated to take on new technical challenges, and always eager to learn. I work well in teams and pick up new skills quickly.</p>
                   </div>
                 <br>
                 <div class="part-two">
-                  My qualities: organized, optimist, determined, flexible.
+                  My qualities: organized, determined, flexible, adaptable, detail-oriented, reliable.
                   </div>             
                 </div>
               </div>
@@ -92,24 +107,106 @@
             <div id="education" class="content-title">EDUCATION</div>
               <hr class="under-line" align="left">
             <div class="container-education">
-              <div class="content-second-title">Computer and Information Systems Specialist</div>
-              <div class="content-date-and-location">2017 - 2019 | EPSI | MONTPELLIER</div>
-              <!-- <div class="content-text about-diploma">description</div> -->
-              <br>
-              <div class="content-second-title">Concepteur integrateur DevOps</div>
-              <div class="content-date-and-location">2016 | EPSI | MONTPELLIER</div>
-              <!-- <div class="content-text about-diploma">description</div> -->
-              <br>
-              <div class="content-second-title">High School Diploma STI2D</div>
-              <div class="content-date-and-location">2014 | VICTOR HUGO COLLEGE | LUNEL</div>
-              <!-- <div class="content-text about-diploma">description</div> -->
-              <br>
+              <div class="diploma-item">
+                <div class="content-second-title">Computer and Information Systems Specialist</div>
+                <div class="content-date-and-location">2017 - 2019 | EPSI | MONTPELLIER</div>
+                <!-- <div class="content-text about-diploma">description</div> -->
+                <div class="diploma-equivalence">Level 7 (EQF / RNCP) - former French Level I - Bac+5, Master's degree equivalent</div>
+                <a class="diploma-link" href="./diplomas/epsi-computer-information-systems-specialist-2019.pdf" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                </a>
+                </div>
+              <div class="diploma-item">
+                <div class="content-second-title">Concepteur integrateur DevOps</div>
+                <div class="content-date-and-location">2016 | EPSI | MONTPELLIER</div>
+                <!-- <div class="content-text about-diploma">description</div> -->
+                <div class="diploma-equivalence">Level 6 (EQF / RNCP) - former French Level II - Bac+3, Bachelor's degree equivalent</div>
+                <a class="diploma-link" href="./diplomas/epsi-concepteur-integrateur-devops-2016.pdf" target="_blank" rel="noopener noreferrer">
+                  <i class="fa fa-external-link" aria-hidden="true"></i> Diploma
+                </a>
+                </div>
+              <div class="diploma-item">
+                <div class="content-second-title">High School Diploma STI2D</div>
+                <div class="content-date-and-location">2014 | VICTOR HUGO COLLEGE | LUNEL</div>
+                <!-- <div class="content-text about-diploma">description</div> -->
+                </div>
+              </div>
+            <br>
+            <!-- <hr class="line-divider" align="center"> -->
+            <div id="certifications" class="content-title">CERTIFICATIONS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-certifications">
+              <div class="row">
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Professional (L3) Kubernetes R23 R&amp;D Engineer</div>
+                  <div class="content-date-and-location">2024 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-kubernetes-l3-professional-2024.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Red Hat OpenShift Administration for the Nokia Access Controller</div>
+                  <div class="content-date-and-location">2023 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-openshift-administration-2023.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">Cursor Training - Required for Access</div>
+                  <div class="content-date-and-location">2026 | NOKIA</div>
+                  <a class="certificate-link" href="./certificates/nokia-cursor-training-2026.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-external-link" aria-hidden="true"></i> Certificate of completion
+                  </a>
+                  </div>
+                <!-- add more col-md-6 .certification-item blocks here -->
+                <div class="col-md-6 certification-item">
+                  <div class="content-second-title">All certifications</div>
+                  <a class="certificate-link" href="./certifications.html">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i> See the full list
+                  </a>
+                  </div>
+                </div>
               </div>
             <br>
             <!-- <hr class="line-divider" align="center"> -->
             <div id="experience" class="content-title">EXPERIENCE</div>
             <hr class="under-line" align="left">
             <div class="container container-experience">
+              <div class="row">
+                <div class="col-md-7 exp-text-column">
+                  <div class="stage-nokia">
+                    <div class="content-under-title"> 
+                        NOKIA
+                      </div>
+                    <div class="content-date"> 
+                        2020 - AUGUST 2026 | LISBON
+                      </div>
+                    <div class="content-job-title">
+                        Software engineer
+                      </div>
+                    <div class="content-text about-experience">
+                      I worked for Nokia, a global supplier of telecommunications equipment and software, on products that
+                      operators use to manage and monitor their networks. I joined the team as an intern and grew into a
+                      software engineer role. My work covered the whole life of the product rather than a single stage.
+                      I developed new features, fixed bugs and investigated issues reported on live systems, which often
+                      meant following a problem through logs across several services before I could reproduce it locally.
+                      A large part of my time went to the production side: I supported releases and deployments of
+                      containerised services with Docker and Kubernetes on Linux, and I maintained the Jenkins pipelines
+                      that built, tested and delivered them, including on cloud environments. I also wrote Python tooling
+                      and automated tests, to take repetitive steps away from the team and to catch regressions before
+                      they reached a customer. When an operator escalated a problem, I was one of the people
+                      troubleshooting it directly, which taught me to stay methodical under pressure and to explain
+                      technical findings to people who are not engineers. In my last year there, AI development tools
+                      such as Cursor and GitHub Copilot were part of my daily work, mostly to speed up routine changes
+                      and to help debug code and pipeline failures.
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img class="skill-image" src="./images/stage/NAC_OAM_Launchpad.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
               <div class="row">
                 <div class="col-md-7 exp-text-column">
                   <div class="stage-vestas">
@@ -241,14 +338,28 @@
             <div id="skills" class="content-title">SKILLS</div>
             <hr class="under-line" align="left">
             <div class="container container-skills">
-              <div class="row row-title-skills">PROFESSIONNAL</div>
+              <div class="row row-title-skills">PROFESSIONAL</div>
               <br>
               <div class="row second-title-skills">CODING</div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/code/Csharp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">C#</div>
+                  <img class="skill-image" src="./images/logo/code/python.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Python</div>
                   </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/bash.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Bash / Shell</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/yaml.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">YAML</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/json.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">JSON</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/code/HTML5.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">HTML</div>
@@ -260,6 +371,28 @@
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/code/javascript.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">JavaScript</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/typescript.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">TypeScript</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/jquery.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">JQuery</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/bootstrap.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Bootstrap</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/nodejspng.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Node.js</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/code/Csharp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">C#</div>
                   </div>
                 </div>
               <div class="row row-skills">
@@ -280,18 +413,38 @@
                   <div class="skill-description">Visual Basic</div>
                   </div>
                 </div>
+              <hr>
+              <div class="row second-title-skills">AI TOOLS &amp; MODELS</div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/code/jquery.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">JQuery</div>
+                  <img class="skill-image" src="./images/logo/ai/CUBE_25D.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Cursor</div>
                   </div>
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/code/bootstrap.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Bootstrap</div>
+                  <img class="skill-image" src="./images/logo/ai/github-copilot-icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">GitHub Copilot</div>
                   </div>
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/code/nodejspng.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Node.js</div>
+                  <img class="skill-image" src="./images/logo/ai/ollama-icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Ollama</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/ai/comfyUI.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">ComfyUI</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/ai/composer_25.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Cursor Composer</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/ai/ClaudeOpus.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Claude Sonnet</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/ai/mistral-ai-logo-1539.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Mistral AI</div>
                   </div>
                 <div class="col-md-3">
                   </div>
@@ -300,27 +453,77 @@
               <div class="row second-title-skills">PROGRAMS</div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/Visual_Studio_2017.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Visual studio</div>
-                  </div>
-                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/Visual_Studio_Code.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Visual Studio Code</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/vmware.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">VMware</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/openstack.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">OpenStack</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/docker.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Docker</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/K8S.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Kubernetes</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/helm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Helm</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/harbor_icon_black.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Harbor</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/WampServer.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">WAMP</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/xampp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">XAMPP</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/phpMyAdmin.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PhpMyAdmin</div>
                   </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/office_365.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Office 365</div>
                   </div>
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/phpStorm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">PhpStorm</div>
+                  <img class="skill-image" src="./images/logo/program/teams.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Microsoft Teams</div>
                   </div>
                 </div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/draw.io.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Draw.io</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/Visual_Studio_2017.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Visual studio</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/phpStorm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">PhpStorm</div>
+                  </div>
+                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/unity3D.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Unity 3D</div>
                   </div>
+                </div>
+              <div class="row row-skills">
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/Maya.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">MAYA</div>
@@ -333,20 +536,6 @@
                   <img class="skill-image" src="./images/logo/program/solidworks.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">SolidWorks</div>
                   </div>
-                </div>
-              <div class="row row-skills">
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/vmware.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">VMware</div>
-                  </div>
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/WampServer.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">WAMP</div>
-                  </div>
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/xampp.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">XAMPP</div>
-                  </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/gitkraken.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">GitKraken</div>
@@ -354,47 +543,39 @@
                 </div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/InfoPath_2013.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">infoPath</div>
+                  <img class="skill-image" src="./images/logo/program/arduino.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Arduino</div>
                   </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/postman.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">PostMan</div>
                   </div>
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/code/arduino.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Arduino</div>
-                  </div>
-                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/staruml.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">StarUML</div>
                   </div>
-                </div>
-              <div class="row row-skills">
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/visualparadigm.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Visual Paradigm</div>
                   </div>
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/sourcetree.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">SourceTree</div>
-                  </div>
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/program/docker.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Docker</div>
-                  </div>
+                </div>
+              <div class="row row-skills">
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/program/tableau.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Tableau Public</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/program/InfoPath_2013.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">infoPath</div>
+                  </div>
+                <div class="col-md-3">
+                  </div>
+                <div class="col-md-3">
                   </div>
                 </div>
               <hr>
               <div class="row second-title-skills">SERVICES</div>
               <div class="row row-skills">
-                <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/service/tfs.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Team Foundation Server (Azure DevOps)</div>
-                  </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/service/github.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">GitHub</div>
@@ -404,20 +585,48 @@
                   <div class="skill-description">GitLab</div>
                   </div>
                 <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/Gerrit_icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Gerrit</div>
+                  </div>
+                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/service/bitbucket.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">BitBucket</div>
                   </div>
                 </div>
               <div class="row row-skills">
                 <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/Jira_icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Jira</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/Confluence_icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Confluence</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/Sourcetree_icon.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">SourceTree</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/jenkins.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Jenkins</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/artifactory.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Artifactory</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/OpenShift.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Red Hat OpenShift (OCP)</div>
+                  </div>
+                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/service/azure.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Microsoft Azure</div>
                   </div>
-                <div class="col-md-3">
-                  </div>
-                <div class="col-md-3">
-                  </div>
-                <div class="col-md-3">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/service/tfs.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Team Foundation Server (Azure DevOps)</div>
                   </div>
                 </div>
               <hr>
@@ -428,16 +637,28 @@
                   <div class="skill-description">MongoDB</div>
                   </div>
                 <div class="col-md-3 img-element">
-                  <img class="skill-image" src="./images/logo/database/phpMyAdmin.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">PhpMyAdmin</div>
-                  </div>
-                <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/database/Microsoft_SQL_Server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">SQL Server</div>
                   </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/database/oracle.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   <div class="skill-description">Oracle</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/mysql.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">MySQL</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/database/mariadb.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">MariaDB</div>
+                  </div>
+                <div class="col-md-3">
+                  </div>
+                <div class="col-md-3">
+                  </div>
+                <div class="col-md-3">
                   </div>
                 </div>
               <hr>
@@ -457,7 +678,21 @@
                   </div>
                 <div class="col-md-3 img-element">
                   <img class="skill-image" src="./images/logo/os/ubuntu-logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="skill-description">Ubunru</div>
+                  <div class="skill-description">Ubuntu</div>
+                  </div>
+                </div>
+              <div class="row row-skills">
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/alpine-linux.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">Alpine Linux</div>
+                  </div>
+                <div class="col-md-3 img-element">
+                  <img class="skill-image" src="./images/logo/os/Windows_Subsystem_for_Linux_logo.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="skill-description">WSL</div>
+                  </div>
+                <div class="col-md-3">
+                  </div>
+                <div class="col-md-3">
                   </div>
                 </div>
               <br>
@@ -483,6 +718,9 @@
                   <div class="skill-description">
                     <div class="skill-language-name">ENGLISH</div>
                     <div class="skill-language-level">Working knowledge</div>
+                    <a class="certificate-link" href="./certificates/ets-toeic-listening-reading-2018.pdf" target="_blank" rel="noopener noreferrer">
+                      <i class="fa fa-external-link" aria-hidden="true"></i> TOEIC 900/990
+                    </a>
                     </div>
                   </div>
                 <div class="col-md-3 img-element">
@@ -531,6 +769,36 @@
             <div id="projects" class="content-title">PROJECTS</div>
             <hr class="under-line" align="left">
             <div class="container container-projects">
+              <div class="row" id="home-server-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER HUB
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing
+                    </div>
+                  <div class="content-text">
+                    A self-hosted home server that centralises home automation and media services. The main machine runs Alpine Linux (32-bit) to make use of hardware I already had.
+                    </div>
+                  <div class="content-text">
+                    The project covers several areas, each at a different stage:
+                    <span class="more_text home-server-more" style="display:none;">
+                      <ul class="project-status-list">
+                        <li class="status-done"><strong>Media</strong> - A Jellyfin server connected to the TV streams content from the Alpine machine over a shared network drive.</li>
+                        <li class="status-planned"><strong>Garden irrigation</strong> - Sector-based watering control via an ESP32 driving an electrovalve, managed by the Alpine machine.</li>
+                        <li class="status-dropped"><strong>Gate access</strong> - Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.</li>
+                        </ul>
+                      </span>
+                    <span class="read_more home-server-expand"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+                    <span class="read_less home-server-collapse" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/projets/home-server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="image-note">Illustration generated with AI</div>
+                  </div>
+                </div>
+              <hr>
               <div class="row" id="ai-content">
                 <div class="col-md-7">
                   <div class="content-under-title"> 
@@ -668,90 +936,67 @@
                 </div> -->
               <br>
             </div>
-          <script> /* hide porject texte to image size| on click "..." display texte*/
-              $(function(){ /* to make sure the script runs after page load */
-                $('.about-experience').each(function(event){ /* select all divs with the item class */
-                  var max_length = 200; /* set the max content length before a read more link will be added */
-                  if($(this).html().length > max_length){ /* check for content length */
-                    var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-                    var long_content	= $(this).html().substr(max_length);
-                    $(this).html(
-                      short_content+
-                     '<div class="read_more">...</div>'+
-                     '<div class="more_text" style="display:none;">'+long_content+'</div>'
-                     ); /* Alter the html to allow the read more functionality */
-                    $(this).find('div.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
-                      event.preventDefault(); /* prevent the a from changing the url */
-                      $(this).hide(); /* hide the read more button */
-                      $(this).parents('.about-experience').find('.more_text').show(); /* show the .more_text span */   
-                      });
-                    }
-                  });
-                $('.about-project').each(function(event){ /* select all divs with the item class */
-                  var max_length = 200; /* set the max content length before a read more link will be added */
-                  if($(this).html().length > max_length){ /* check for content length */
-                    var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-                    var long_content	= $(this).html().substr(max_length);
-                    $(this).html(
-                      short_content+
-                     '<div class="read_more">...</div>'+
-                     '<div class="more_text" style="display:none;">'+long_content+'</div>'
-                     ); /* Alter the html to allow the read more functionality */
-                    $(this).find('div.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
-                      event.preventDefault(); /* prevent the a from changing the url */
-                      $(this).hide(); /* hide the read more button */
-                      $(this).parents('.about-project').find('.more_text').show(); /* show the .more_text span */   
-                      });
-                    }
-                  });
+          <script> /* hide long text to image size | "..." expands, "^" collapses */
+              $(function () {
+                var max_length = 200; /* max visible length before truncating */
+                $('.about-experience, .about-project').each(function () {
+                  var $el = $(this);
+                  var html = $el.html();
+                  if (html.length > max_length) {
+                    var short_content = html.substr(0, max_length);
+                    var long_content = html.substr(max_length);
+                    /* more_text sits right after the short text so it flows inline when shown;
+                       the buttons render below via their block CSS */
+                    $el.html(
+                      short_content +
+                      '<span class="more_text" style="display:none;">' + long_content + '</span>' +
+                      '<span class="read_more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>' +
+                      '<span class="read_less" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>'
+                    );
+                    var $more = $el.find('.more_text');
+                    var $expand = $el.find('.read_more');
+                    var $collapse = $el.find('.read_less');
+                    $expand.click(function () {
+                      $more.show();
+                      $expand.hide();
+                      $collapse.show();
+                    });
+                    $collapse.click(function () {
+                      $more.hide();
+                      $collapse.hide();
+                      $expand.show();
+                    });
+                  }
                 });
+
+                /* expand/collapse for the home server feature list */
+                $('.home-server-expand').click(function () {
+                  $('.home-server-more').show();
+                  $('.home-server-expand').hide();
+                  $('.home-server-collapse').show();
+                });
+                $('.home-server-collapse').click(function () {
+                  $('.home-server-more').hide();
+                  $('.home-server-collapse').hide();
+                  $('.home-server-expand').show();
+                });
+              });
             </script>
         </div>
     </div>
+    <!-- Click-to-zoom overlay for the experience and project images -->
+    <div id="image-lightbox">
+      <span class="lightbox-close" aria-hidden="true">&times;</span>
+      <img src="" alt="">
+      </div>
     <!-- Footer -->
     <footer class="page-footer fixed-bottom">
       <!-- Footer Elements -->
       <div class="container">
-        <!-- Social buttons -->
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a target="_blank" href="https://github.com/JoaoMMateus">
-                <i class="fa fa-github-square" aria-hidden="true"></i>
-                GitHub
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <a target="_blank" href="https://www.linkedin.com/in/joao-martins-mateus/">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                LinkedIn
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <a class="btn-floating mx-1" target="_blank" href="https://docs.microsoft.com/en-us/users/joaoMMateus/">
-                <i class="fa fa-windows" aria-hidden="true"></i>
-                Microsoft
-                </a>
-              </li>
-            <li class="list-inline-item">
-              <!-- <a href="mailto:joao.martinsmateus@outlook.com?Subject=Hello%20again" target="_top">joao.martinsmateus@outlook.com</a> -->
-              <a href="mailto:joao.martinsmateus@outlook.com" target="_top">
-                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                joao.martinsmateus@outlook.com
-              </a>
-              </li>
-            <li class="list-inline-item">
-                <a href="tel:+33695591672">
-                  <i class="fa fa-phone-square" aria-hidden="true"></i>
-                  06 95 59 16 72
-                  </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="sms:+33695591672?body=[MESSAGE]">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                  06 95 59 16 72
-                  </a>
-              </li>
-            </ul>
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="all"></ul>
           <!-- Social buttons -->
           <!-- <form method="post" action="">
             <input type="text" name="username">
