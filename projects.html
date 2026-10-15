@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Martins Mateus Joao - Projects</title>
+    <link rel="stylesheet" href="./css/custom-body.css">
+    <link rel="stylesheet" href="./css/custom-footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/image-lightbox.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/image-lightbox.js"></script>
+    <script src="./js/footer-contact.js"></script>
+</head>
+
+<header class="page-header" style="height: 10vh;">
+</header>
+<body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+    <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+      DEV BRANCH - not production
+    </div>
+    <script>
+      // Show the dev banner only outside production (local/dev hosts).
+      (function () {
+        var h = location.hostname;
+        var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+        if (isDev) document.getElementById("dev-banner").style.display = "block";
+      })();
+    </script>
+    <div class="container">
+        <div class="row">
+          <!-- first column -->
+          <div id="custom-menu" class="col-sm-5 col-md-4 col-lg-4 fadein" style="text-align: right; border-right: black 2px solid;">
+            <div class="row">
+              <div class="col-md-12" style="margin-top: 25vh;">
+                <div class="row">
+                  <div id="PrenomTitre" class="col-md-12">João</div>
+                  </div>
+                <div class="row Name-Title">
+                  <div id="NomTitre" class="col-md-12">MARTINS MATEUS</div>
+                  </div>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-md-12" style="padding-right: 0%; padding-left: 50%;">
+                                <nav class="navbar navbar-light flex-column" id="menu">
+                  <!-- no nav-link class: it would make scrollspy treat the back
+                       link as one of the page sections -->
+                  <a class="nav-back" href="./index.html#projects">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> BACK
+                  </a>
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <a class="nav-link" href="#ongoing">ONGOING</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#ai">ARTIFICIAL INTELLIGENCE</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="#applications">APPLICATIONS</a>
+                    </li>
+                    <!-- add one li per project group, matching a section below -->
+                  </ul>
+                </nav>
+              </div>
+              </div>
+            </div>
+          <!-- second column -->
+          <div id="content" class="col-sm-7 col-md-8 col-lg-8 fadein" data-spy="scroll" data-target="#menu" data-offset="50" style=" height: 80vh; background-color:whitesmoke;overflow-y: scroll; scroll-behavior: smooth;">
+            <div class="page-title sub-page-top">PROJECTS</div>
+            <hr class="under-line page-under-line" align="left">
+<div id="ongoing" class="content-title">ONGOING</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="home-server-media-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER MEDIA
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing | Done
+                    </div>
+                  <div class="content-text about-project">
+                    A Jellyfin media server connected to the TV streams content from the Alpine machine over a shared network drive, making the family's media library available on any screen at home.
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/projets/home-server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                    <div class="image-note">Illustration generated with AI</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="home-server-irrigation-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER GARDEN IRRIGATION
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing | Planned
+                    </div>
+                  <div class="content-text about-project">
+                    Sector-based watering control for the garden, driven by an ESP32 board switching an electrovalve and managed from the Alpine machine.
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/blur-business-close-up.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="home-server-gate-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER GATE ACCESS
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing | On hold
+                    </div>
+                  <div class="content-text about-project">
+                    Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/blur-business-close-up.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="unity-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    Unity
+                    </div>
+                  <div class="content-date"> 
+                    2016 - Ongoing
+                    </div>
+                  <div class="content-text about-project">
+                    In order to use Unity3D in personal projects, 
+                    I followed different Unity tutorials including the making of a space shooter game. 
+                    Currently, I am testing the free tools offered in the unity store.
+                    </div>
+                    <!-- french texte :
+                      Dans l’optique d’utiliser Unity3D dans de projets personnels, j’ai suivi différent tutoriel Unity notamment la réalisation d’un jeu le space shooter. Actuellement, je teste les outils gratuits proposer dans le store de unity.
+                      -->
+                  </div>
+                  <div class="col-md-5">
+                    <img  src="./images/projets/unityproject.gif" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                    </div>
+                </div>
+              <br>
+            </div>
+            <br>
+<div id="ai" class="content-title">ARTIFICIAL INTELLIGENCE</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="ai-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    WUMPUS
+                    </div>
+                  <div class="content-date"> 
+                    2017
+                    </div>
+                  <div class="content-text about-project">
+                    This project aims to develop an artificial intelligence that will participate 
+                    in the game called "The World of Wumpus". Artificial intelligence will have to 
+                    move around the playground to reach the treasure without getting caught by the Wumpus. 
+                    This one is a monster that defends its cave, this one being the playground. 
+                    In this work the visual appearance was not the main goal to ask. 
+                    The idea was to allow the AI to move according to the data it receives by moving from box to box. 
+                    The smell of Wumpus allows the AI to recognize its presence on one of the adjacent boxes. 
+                    The flicker of gold signals the presence of the treasure in the box and thus indicates to the AI the achievement of its objective.
+                    </div>
+                    <!--french texte : 
+                      Ce projet a pour but le développement d’une intelligence artificielle qui participera au jeu nommé « Le monde de Wumpus ». L’intelligence artificielle devra se déplacer dans le terrain de jeu de façon à rejoindre le trésor sans se faire attraper par le Wumpus. Celui-ci est un monstre qui défend sa caverne, celle-ci étant l’aire de jeu. Dans ce travail l’aspect visuel n’était pas l’objectif principal demander. L’idée été de permettre à l’IA de se déplacer en fonction des données qu’elle reçoit en se déplaçant de case en case. L’odeur du Wumpus permet à l’IA de reconnaitre sa présence sur l’une des cases adjacentes. Le scintillement de l’or signale la présence du trésor dans la case et indique ainsi à l’IA la réalisation de son objectif.
+                      -->
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/projets/wumpus.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="ra-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    Augmented Reality
+                    </div>
+                  <div class="content-date"> 
+                    2018
+                    </div>
+                  <div class="content-text about-project">
+                    In this Reconstructed Professional Situation (MSPR), 
+                    the main goal was to display a 3D model associated with an image that children could color. 
+                    The application should therefore be able to retrieve the colors present on the drawing and apply them to the 3D model. 
+                    Being intended for a very young audience, we therefore thought of adding an additional functionality: 
+                    interaction with the 3D model. 
+                    To illustrate this idea, we added a target that the 3D model will follow.
+                    </div>
+                    <!-- french texte :
+                      Dans cette Mise en Situation Professionnel Reconstitué (MSPR), l’objectif principal été d’afficher un modèle 3D associer à une image que des enfants pourrait colorier. L’application devait ainsi pouvoir récupérer les couleurs présentes sur le dessin et les appliquer au modèle 3D. Étant destiné à un public très jeune, on a donc pensé à ajouter une fonctionnalité supplémentaire soit l’interaction avec le modèle 3D. Pour illustrer cette idée, on a ajouté une cible que le modèle 3D va suivre.
+                      -->
+                  </div>
+                  <div class="col-md-5">
+                    <img  src="./images/projets/Unity_Position.JPG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                    </div>
+                </div>
+              <br>
+            </div>
+            <br>
+<div id="applications" class="content-title">APPLICATIONS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="opticook-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    OPTICOOK
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    Application in C# using the concept of object-oriented programming. 
+                    The Microsoft Entity Framework is therefore used to create an application to manage an individual's food stock, 
+                    informing the user of the impending expiration dates of each product while 
+                    offering recipes selected based on the amount of products in stock.
+                    </div>
+                    <!-- french texte :
+                      Application en C# utilisant le concept de programmation orientée objet. On utilise donc le Framework de Microsoft Entity Framework pour réaliser une application de gestion du stocke alimentaire d’un particulier, en informant l’utilisateur sur les date de péremption imminente de chacun des produits tout en proposant des recettes sélectionné en fonction de la quantité de produits présent en stock.
+                      -->
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/projets/opticook.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="optibench-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    OPTIBENCH
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    During this school project, the goal was to create a web application with the Symfony Framework. 
+                    With the team I was in, we created a web application that lists different computer component and 
+                    allows a client to compare them and thus set up a computer.
+                    </div>
+                    <!-- french texte :
+                      Lors de ce projet d’école, l’objectif était de crée une application web avec le Framework Symfony. Avec l’équipe dans lequel j’étais, nous avons donc réaliser une application web qui liste différent composant d’ordinateur et qui permet à un client de les comparer et d’ainsi configurer un ordinateur.
+                      -->
+                  </div>
+                  <div class="col-md-5">
+                    <img  src="./images/projets/optibench.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                    </div>
+                </div>
+              <br>
+            </div>
+            <br>
+          </div>
+        </div>
+    </div>
+<script> /* hide long text to image size | "..." expands, "^" collapses */
+              $(function () {
+                var max_length = 200; /* max visible length before truncating */
+                $('.about-experience, .about-project').each(function () {
+                  var $el = $(this);
+                  var html = $el.html();
+                  if (html.length > max_length) {
+                    var short_content = html.substr(0, max_length);
+                    var long_content = html.substr(max_length);
+                    /* more_text sits right after the short text so it flows inline when shown;
+                       the buttons render below via their block CSS */
+                    $el.html(
+                      short_content +
+                      '<span class="more_text" style="display:none;">' + long_content + '</span>' +
+                      '<span class="read_more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>' +
+                      '<span class="read_less" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>'
+                    );
+                    var $more = $el.find('.more_text');
+                    var $expand = $el.find('.read_more');
+                    var $collapse = $el.find('.read_less');
+                    $expand.click(function () {
+                      $more.show();
+                      $expand.hide();
+                      $collapse.show();
+                    });
+                    $collapse.click(function () {
+                      $more.hide();
+                      $collapse.hide();
+                      $expand.show();
+                    });
+                  }
+                });
+              });
+            </script>
+    <!-- Click-to-zoom overlay for the experience and project images -->
+    <div id="image-lightbox">
+      <span class="lightbox-close" aria-hidden="true">&times;</span>
+      <img src="" alt="">
+      </div>
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="all"></ul>
+          <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+      <!-- Footer -->
+</body>
+</html>
