@@ -74,33 +74,55 @@
 <div id="ongoing" class="content-title">ONGOING</div>
             <hr class="under-line" align="left">
             <div class="container container-projects">
-              <div class="row" id="home-server-content">
+              <div class="row" id="home-server-media-content">
                 <div class="col-md-7">
                   <div class="content-under-title"> 
-                    HOME SERVER HUB
+                    HOME SERVER MEDIA
                     </div>
                   <div class="content-date"> 
-                    Ongoing
+                    Ongoing | Done
                     </div>
-                  <div class="content-text">
-                    A self-hosted home server that centralises home automation and media services. The main machine runs Alpine Linux (32-bit) to make use of hardware I already had.
-                    </div>
-                  <div class="content-text">
-                    The project covers several areas, each at a different stage:
-                    <span class="more_text home-server-more" style="display:none;">
-                      <ul class="project-status-list">
-                        <li class="status-done"><strong>Media</strong> - A Jellyfin server connected to the TV streams content from the Alpine machine over a shared network drive.</li>
-                        <li class="status-planned"><strong>Garden irrigation</strong> - Sector-based watering control via an ESP32 driving an electrovalve, managed by the Alpine machine.</li>
-                        <li class="status-dropped"><strong>Gate access</strong> - Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.</li>
-                        </ul>
-                      </span>
-                    <span class="read_more home-server-expand"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
-                    <span class="read_less home-server-collapse" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                  <div class="content-text about-project">
+                    A Jellyfin media server connected to the TV streams content from the Alpine machine over a shared network drive, making the family's media library available on any screen at home.
                     </div>
                   </div>
                 <div class="col-md-5">
                   <img  src="./images/projets/home-server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
-                  <div class="image-note">Illustration generated with AI</div>
+                    <div class="image-note">Illustration generated with AI</div>
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="home-server-irrigation-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER GARDEN IRRIGATION
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing | Planned
+                    </div>
+                  <div class="content-text about-project">
+                    Sector-based watering control for the garden, driven by an ESP32 board switching an electrovalve and managed from the Alpine machine.
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/blur-business-close-up.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+              <div class="row" id="home-server-gate-content">
+                <div class="col-md-7">
+                  <div class="content-under-title"> 
+                    HOME SERVER GATE ACCESS
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing | On hold
+                    </div>
+                  <div class="content-text about-project">
+                    Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.
+                    </div>
+                  </div>
+                <div class="col-md-5">
+                  <img  src="./images/blur-business-close-up.jpg" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
                   </div>
                 </div>
               <hr>
@@ -269,18 +291,6 @@
                       $expand.show();
                     });
                   }
-                });
-
-                /* expand/collapse for the home server feature list */
-                $('.home-server-expand').click(function () {
-                  $('.home-server-more').show();
-                  $('.home-server-expand').hide();
-                  $('.home-server-collapse').show();
-                });
-                $('.home-server-collapse').click(function () {
-                  $('.home-server-more').hide();
-                  $('.home-server-collapse').hide();
-                  $('.home-server-expand').show();
                 });
               });
             </script>
