@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Martins Mateus Joao - Projects</title>
+    <link rel="stylesheet" href="./css/mobile-custom-body.css">
+    <link rel="stylesheet" href="./css/custom-footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/footer-contact.js"></script>
+</head>
+<body onload="document.body.className += ' loaded';" style="overflow: hidden; background-color: whitesmoke;">
+  <div id="dev-banner" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:9999; background:#d9534f; color:#fff; text-align:center; font-weight:bold; padding:4px 0; font-family:sans-serif;">
+    DEV BRANCH - not production
+  </div>
+  <script>
+    // Show the dev banner only outside production (local/dev hosts).
+    (function () {
+      var h = location.hostname;
+      var isDev = h === "localhost" || h === "127.0.0.1" || h === "" || h.endsWith(".local");
+      if (isDev) document.getElementById("dev-banner").style.display = "block";
+    })();
+  </script>
+  <!-- align all element to center -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-simple" id="menu">
+    <a class="nav-back" href="./index-mobile.html#projects" aria-label="Back">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </a>
+    <!-- align divs one on the other on the middle -->
+        <div class="justify-content-center" href="#" id="PrenomTitre">João</div>
+        <div class="justify-content-center" href="#" id="NomTitre">MARTINS MATEUS</div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12" style="height: 10vh;"></div>
+        </div>
+        <div class="row">
+          <!-- single column content, stacked for phone display -->
+          <div id="content" class="col-md-12 fadein" style=" height: 80vh; background-color:whitesmoke;overflow-y: auto; scroll-behavior: smooth;">
+            <div class="page-title sub-page-top">PROJECTS</div>
+            <hr class="under-line page-under-line" align="left">
+<div id="ongoing" class="content-title">ONGOING</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="home-server-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    HOME SERVER HUB
+                    </div>
+                  <div class="content-date"> 
+                    Ongoing
+                    </div>
+                  <div class="content-text">
+                    A self-hosted home server that centralises home automation and media services. The main machine runs Alpine Linux (32-bit) to make use of hardware I already had.
+                    </div>
+                  <div class="content-text">
+                    The project covers several areas, each at a different stage:
+                    <span class="more_text home-server-more" style="display:none;">
+                      <ul class="project-status-list">
+                        <li class="status-done"><strong>Media</strong> - A Jellyfin server connected to the TV streams content from the Alpine machine over a shared network drive.</li>
+                        <li class="status-planned"><strong>Garden irrigation</strong> - Sector-based watering control via an ESP32 driving an electrovalve, managed by the Alpine machine.</li>
+                        <li class="status-dropped"><strong>Gate access</strong> - Planned OCR pipeline: a camera reads number plates and automates door open/close. On hold until the door/gate is installed, as it was planned for my parents new house.</li>
+                        </ul>
+                      </span>
+                    <span class="read_more home-server-expand"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+                    <span class="read_less home-server-collapse" style="display:none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/home-server.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  <div class="image-note">Illustration generated with AI</div>
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="unity-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    Unity
+                    </div>
+                  <div class="content-date"> 
+                    2016 - Ongoing
+                    </div>
+                  <div class="content-text about-project">
+                    In order to use Unity3D in personal projects, 
+                    I followed different Unity tutorials including the making of a space shooter game. 
+                    Currently, I am testing the free tools offered in the unity store.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/unityproject.gif" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <br>
+            </div>
+            <br>
+<div id="ai" class="content-title">ARTIFICIAL INTELLIGENCE</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="ai-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    WUMPUS
+                    </div>
+                  <div class="content-date"> 
+                    2017
+                    </div>
+                  <div class="content-text about-project">
+                    This project aims to develop an artificial intelligence that will participate 
+                    in the game called "The World of Wumpus". Artificial intelligence will have to 
+                    move around the playground to reach the treasure without getting caught by the Wumpus. 
+                    This one is a monster that defends its cave, this one being the playground. 
+                    In this work the visual appearance was not the main goal to ask. 
+                    The idea was to allow the AI to move according to the data it receives by moving from box to box. 
+                    The smell of Wumpus allows the AI to recognize its presence on one of the adjacent boxes. 
+                    The flicker of gold signals the presence of the treasure in the box and thus indicates to the AI the achievement of its objective.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/wumpus.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="ra-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    Augmented Reality
+                    </div>
+                  <div class="content-date"> 
+                    2018
+                    </div>
+                  <div class="content-text about-project">
+                    In this Reconstructed Professional Situation (MSPR), 
+                    the main goal was to display a 3D model associated with an image that children could color. 
+                    The application should therefore be able to retrieve the colors present on the drawing and apply them to the 3D model. 
+                    Being intended for a very young audience, we therefore thought of adding an additional functionality: 
+                    interaction with the 3D model. 
+                    To illustrate this idea, we added a target that the 3D model will follow.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/Unity_Position.JPG" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <br>
+            </div>
+            <br>
+<div id="applications" class="content-title">APPLICATIONS</div>
+            <hr class="under-line" align="left">
+            <div class="container container-projects">
+              <div class="row" id="opticook-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    OPTICOOK
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    Application in C# using the concept of object-oriented programming. 
+                    The Microsoft Entity Framework is therefore used to create an application to manage an individual's food stock, 
+                    informing the user of the impending expiration dates of each product while 
+                    offering recipes selected based on the amount of products in stock.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/opticook.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <hr>
+<div class="row" id="optibench-content">
+                <div class="col-md-12">
+                  <div class="content-under-title"> 
+                    OPTIBENCH
+                    </div>
+                  <div class="content-date"> 
+                    2016
+                    </div>
+                  <div class="content-text about-project">
+                    During this school project, the goal was to create a web application with the Symfony Framework. 
+                    With the team I was in, we created a web application that lists different computer component and 
+                    allows a client to compare them and thus set up a computer.
+                    </div>
+                  </div>
+                <div class="col-md-12">
+                  <img  src="./images/projets/optibench.png" onerror="this.onerror=null; this.src='./images/blur-business-close-up.jpg'" alt="" width="100%" height="auto">
+                  </div>
+                </div>
+              <br>
+            </div>
+            <br>
+            </div>
+          </div>
+        </div>
+    <!-- Click-to-zoom overlay for the experience and project images -->
+    <div id="image-lightbox">
+      <span class="lightbox-close" aria-hidden="true">&times;</span>
+      <img src="" alt="">
+      </div>
+    <!-- Footer -->
+    <footer class="page-footer fixed-bottom">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Social buttons - filled from data/contact.json by js/footer-contact.js -->
+          <ul class="list-inline text-center"
+              data-contacts-src="./data/contact.json"
+              data-contacts-labels="minimal"></ul>
+          <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+      </footer>
+    <!-- Footer -->
+</body>
+</html>
