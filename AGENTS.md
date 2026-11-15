@@ -101,3 +101,15 @@ As a <role>, I want <goal>, so that <benefit>.
 
 ### Who writes the tests
 - Tests may be written by a different agent or model than the one implementing the feature, as long as the tests still follow all rules above: they run in CI, they pass before merge, and they are frozen after merge unless the tested core functionality changes.
+
+## 5. No Cloud Folder Search (`no-cloud-folders`)
+
+### Rule
+- Never search, read, index, list, or write files inside cloud-synced or cloud-storage folders: Microsoft OneDrive, Google Drive, Apple iCloud Drive, Dropbox, Box, or any other cloud mount/sync folder.
+- Keep all file operations local to the current project directory and its repository.
+
+### If a request points at a cloud folder
+- If a user-requested file or path appears to live in a cloud folder (path contains `OneDrive`, `Google Drive`, `iCloud`, `Dropbox`, etc.), do NOT open or search it. Stop and tell the user to copy/move the file into the project first.
+
+### Scope
+- Applies in every mode (code mode and work/planning mode) and in every session type: CLI, VS Code, and workspace sessions.
